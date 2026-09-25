@@ -13,7 +13,7 @@ button.fron = Enum.Front.SourceSansBold
 button.TextSize = 18
 
 --make the button open and  close (no ai is being using bum ethan)
-Button.MouseButton1Click:connect(function()
+Button.MouseButton1Click:Connect(function()
     panel.Visible = not  panel.Visible
     if  panel.Visible then
          button.Text = "Ethan Is A Clown LOL"
