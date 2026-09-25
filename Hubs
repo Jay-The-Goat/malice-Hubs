@@ -1,5 +1,5 @@
 local button = script.Parent
-local player  = game.Player.LocalPlayer
+local player  = button.Parent:WaitForChild("SmallPanel")
 
 local is Toggle _ false 
 
