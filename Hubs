@@ -1,8 +1,6 @@
 local button = script.Parent
 local player  = button.Parent:WaitForChild("SmallPanel")
 
-local is Toggle _ false 
-
 --setup
 button.Size = UDim2.new(0,150,0,50)
 button.Position = UDim2.new(0.05,0,0.4,0)
