@@ -4,14 +4,14 @@ local player  = button.Parent:WaitForChild("SmallPanel")
 --setup
 button.Size = UDim2.new(0,150,0,50)
 button.Position = UDim2.new(0.05,0,0.4,0)
-button.backgroundColor3 = Color3.fromRGB(40,40,40)
-button.TextColor3 = Color3.FromRGB(255,255,255,)
+button.BackgroundColor3 = Color3.fromRGB(40,40,40)
+button.TextColor3 = Color3.fromRGB(255,255,255)
 button.Text = "Ethan Is A Clown"
 button.fron = Enum.Front.SourceSansBold
 button.TextSize = 18
 
 --make the button open and  close (no ai is being using bum ethan)
-Button.MouseButton1Click:Connect(function()
+button.MouseButton1Click:Connect(function()
     panel.Visible = not  panel.Visible
     if  panel.Visible then
          button.Text = "Ethan Is A Clown LOL"
@@ -19,6 +19,6 @@ Button.MouseButton1Click:Connect(function()
     else 
     if panel.Visible then
        button.Text = "Ethan Is A Clown"
-       button.backgroundColor3  Color3.fromRGB(35,35,35)
+       button.BackgroundColor3  Color3.fromRGB(35,35,35)
     end
 end)
