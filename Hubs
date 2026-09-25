@@ -1,24 +1,43 @@
-local button = script.Parent
-local player  = button.Parent:WaitForChild("SmallPanel")
+local sgui = Instant.new("screen")
+sgui.name = "DeltaJayHub"
+sgui.Parent = game:GetService("CoreGui")
 
---setup
-button.Size = UDim2.new(0,150,0,50)
-button.Position = UDim2.new(0.05,0,0.4,0)
-button.BackgroundColor3 = Color3.fromRGB(40,40,40)
-button.TextColor3 = Color3.fromRGB(255,255,255)
-button.Text = "Ethan Is A Clown"
-button.fron = Enum.Front.SourceSansBold
+local panel = Instant.new("frame")
+panel.Name "Smalll Panel"
+panel.Size = UDim2.new(0, 250, 0, 200)
+panel.Position = UDim2.new(0.5, -125, 0.5, 100)
+panel.BackgroundColor3 Color3.fromRGB(30, 30, 30)
+panel.Visible = false
+panel.Parent = sgui
+
+local panel = Instant.new("TextLabel")
+paneltext.Size = UDim2.new(1, 0, 0.4, 0)
+panetext.Position = UDim2.new(0, 0, 0.3, 0)
+panelText.BackgroundTransparency = 1
+panelText.TextColor3 = TextColor3.fromRGB(255 ,255, 255)
+panelText.Text = "you had open this panel!"
+panelText.font = Enum.Font.SourchSansBold
+panelText.Text = 20
+panelText.Parent = panel
+
+local  button = Instant.new("TextButton")
+button.Name = "Open Button"
+button.Size = UDim2.new(0, 150, 0 ,50)
+button.Position = UDim2.new(0.5, 0, 0.4, 0)
+button.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+button.TextColor3 = Color3.fromRGB(255, 255, 255)
+button.Text = "HI BUDDY"
+button.Font  = Enum.Font.SourchSansBold
 button.TextSize = 18
+button.Parent = sgui
 
---make the button open and  close (no ai is being using bum ethan)
-button.MouseButton1Click:Connect(function()
-    panel.Visible = not  panel.Visible
-    if  panel.Visible then
-         button.Text = "Ethan Is A Clown LOL"
-         button.BackgroundColor3 = color3.fromRgd(200,50,50)
-    else 
+button.MouseButton.1Click:Connect(function()
+    panel.Visible = now panel.Visible
     if panel.Visible then
-       button.Text = "Ethan Is A Clown"
-       button.BackgroundColor3  Color3.fromRGB(35,35,35)
+        button.Text = "open"
+        button.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
+    else
+         buttton.Text = "close"
+         button.BackgroundColor3 = Color3.fromRGB(35,30, 35)
     end
 end)
