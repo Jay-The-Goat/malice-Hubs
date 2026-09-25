@@ -1,0 +1,26 @@
+local button = script.Parent
+local player  = game.Player.LocalPlayer
+
+local is Toggle _ false 
+
+--setup
+button.Size = UDim2.new(0,150,0,50)
+button.Position = UDim2.new(3,3.53,5)
+button.backgroundColor3 = Color3.fromRGB(40,40,40)
+button.TextColor3 = Color3.FromRGB(255,255,255,)
+button.Text = "Ethan Is A Clown"
+button.fron = Enum.Front.SourceSansBold
+button.TextSize = 18
+
+--make the button open and  close (no ai is being using bum ethan)
+Button.MouseButton1Click:connect(function()
+    panel.Visible = not  panel.Visible
+    if  panel.Visible then
+         button.Text = "Ethan Is A Clown LOL"
+         button.BackgroundColor3 = color3.fromRgd(200,50,50)
+    else 
+    if panel.Visible then
+       button.Text = "Ethan Is A Clown"
+       button.backgroundColor3  Color3.fromRGB(35,35,35)
+    end
+end)
