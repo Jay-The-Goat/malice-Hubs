@@ -1,38 +1,38 @@
-local sgui = Instant.new("screen")
-sgui.name = "DeltaJayHub"
+local sgui = Instance.new("ScreenGui")
+sgui.Name = "DeltaJayHub"
 sgui.Parent = game:GetService("CoreGui")
 
-local panel = Instant.new("frame")
-panel.Name "Smalll Panel"
+local panel = Instance.new("frame")
+panel.Name = "Smalll Panel"
 panel.Size = UDim2.new(0, 250, 0, 200)
 panel.Position = UDim2.new(0.5, -125, 0.5, 100)
-panel.BackgroundColor3 Color3.fromRGB(30, 30, 30)
+panel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 panel.Visible = false
 panel.Parent = sgui
 
-local panel = Instant.new("TextLabel")
-paneltext.Size = UDim2.new(1, 0, 0.4, 0)
-panetext.Position = UDim2.new(0, 0, 0.3, 0)
+local panel = Instance.new("TextLabel")
+panelText.Size = UDim2.new(1, 0, 0.4, 0)
+paneText.Position = UDim2.new(0, 0, 0.3, 0)
 panelText.BackgroundTransparency = 1
-panelText.TextColor3 = TextColor3.fromRGB(255 ,255, 255)
+panelText.TextColor3 = Color3.fromRGB(255, 255, 255)
 panelText.Text = "you had open this panel!"
-panelText.font = Enum.Font.SourchSansBold
-panelText.Text = 20
+panelText.Font = Enum.Font.SourceSansBold
+panelText.TextSize = 20
 panelText.Parent = panel
 
-local  button = Instant.new("TextButton")
-button.Name = "Open Button"
+local  button = Instance.new("TextButton")
+button.Name = "OpenButton"
 button.Size = UDim2.new(0, 150, 0 ,50)
 button.Position = UDim2.new(0.5, 0, 0.4, 0)
 button.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 button.TextColor3 = Color3.fromRGB(255, 255, 255)
 button.Text = "HI BUDDY"
-button.Font  = Enum.Font.SourchSansBold
+button.Font  = Enum.Font.SourceSansBold
 button.TextSize = 18
 button.Parent = sgui
 
-button.MouseButton.1Click:Connect(function()
-    panel.Visible = now panel.Visible
+button.MouseButton1Click:Connect(function()
+    panel.Visible = not panel.Visible
     if panel.Visible then
         button.Text = "open"
         button.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
